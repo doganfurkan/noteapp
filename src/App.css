@@ -1,38 +1,61 @@
 .App {
-  text-align: center;
+  max-width: 800px;
+  margin:auto
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#header{
+  width: 100%;
+  max-width: 500px;
+  padding: 1em;
+  margin:0 auto
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.buttons{
+  padding:.5em 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+#notes{
+  width:100%;
+  display: flex;
+  gap:1em;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.note{
+  width:calc(33.3% - 0.67em);
+  padding:.75em .5em;
+  box-shadow: 3px 3px 10px rgba(0,0,0,.2);
+  border-radius: .5em;
+  position: relative;
+  word-wrap: break-word
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.note button{
+  position: absolute;
+  right:.25rem;
+  top:50%;
+  transform: translate(0%,-50%);
+  box-shadow: .1em 0 .5em #0005;
+  z-index: 1;
+  font-weight: 600;
+  font-size:.7em !important
+}
+
+.red{
+  background: rgb(255, 87, 87);
+}
+.blue{
+  background: rgb(51, 115, 255);
+}
+.yellow{
+  background: rgb(255, 255, 0);
+}
+.green{
+  background: rgb(103, 212, 91);
+}
+.purple{
+  background: rgb(182, 73, 188);
 }
